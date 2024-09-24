@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/sushifofo.jpg">
+    <title>Criar Conta</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="voltar-btn">←Voltar</a>
+    </header>
+
+    <div class="caixa-container">
+        <h1>Cadastrando-se</h1>
+        
+        <!-- Aqui o formulário será enviado por JavaScript -->
+        <form id="loginForm" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone" required>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required>
+
+            <label for="alergia">Alergias:</label>
+            <input type="text" id="alergia" name="alergia" required>
+
+            <label for="historia">Escreva sua história para logar:</label>
+            <textarea id="historia" name="historia" required></textarea>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" placeholder="Digite uma senha forte"  required>
+
+            <button type="submit" id="submitBtn">Cadastrar</button>
+        </form>
+
+        <!-- Área para exibir a mensagem de sucesso -->
+        <div id="mensagem-sucesso" style="display:none; color: green; margin-top: 15px;">Cadastro completo! Redirecionando para a página inicial...</div>
+    </div>
+
+    <script src="../js/conta.js"></script>
+</body>
+</html>

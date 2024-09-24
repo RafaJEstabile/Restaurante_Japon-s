@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/sushifofo.jpg">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="caixa-container">
+        <h1>Login....</h1>
+        <form id="loginForm" method="POST" action="php/process.php">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="user0808@gmail.com" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+
+            <div class="links">
+                <a href="html/recuperar.html">Recuperar Senha</a>
+                <a href="html/conta.html">Criar Conta</a>
+            </div>
+
+           <button type="submit" id="submitBtn">Enviar</button>
+        </form>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

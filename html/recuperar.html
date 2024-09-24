@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/sushifofo.jpg">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha</title>
+</head>
+<body>
+    <div class="caixa-container">
+        <div class="container-texto">
+            <h2>Recuperar Senha</h2>
+            <form action="../php/recuperacao.php" method="POST">
+                <label for="email">Digite seu Email:</label>
+                <input type="email" id="email" name="email" placeholder="Insira seu email" required>
+                <button type="submit">Enviar Email de Recuperação</button>
+            </form>
+        </div>
+
+        <!-- Footer com o botão de voltar -->
+        <footer class="footer">
+            <a href="javascript:history.back()" class="voltar-btn">← Voltar</a>
+        </footer>
+    </div>
+</body>
+</html>

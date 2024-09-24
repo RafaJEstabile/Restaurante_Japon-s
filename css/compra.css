@@ -1,0 +1,126 @@
+/* Reseta o estilo padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo geral do corpo */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("../img/wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+/* Estilo do header */
+header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Estilo do botão de voltar */
+.voltar-btn {
+    display: inline-block;
+    background-color: #ff5e5e;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100px;
+    height: 40px;
+}
+
+.voltar-btn:hover {
+    background-color: #e04d4d;
+}
+
+/* Container principal da caixa de checkout */
+.caixa-container {
+    background-color: #ff5e5e;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+    max-width: 90%;
+    margin: 20px auto;
+}
+
+/* Estilo do título */
+h2 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos subtítulos */
+h3 {
+    font-size: 18px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Estilo do select (forma de pagamento) */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do input de cupom */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo dos botões */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #fff;
+    color: #ff4242;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do botão ao passar o mouse */
+button:hover {
+    background-color: #ff4242;
+    color: #fff;
+}
+
+/* Estilo do texto de total */
+#total {
+    font-weight: bold;
+    color: white;
+}
+

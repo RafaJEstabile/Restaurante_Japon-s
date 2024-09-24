@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/sushifofo.jpg">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../css/compra.css">
+</head>
+<body>
+    <header>
+        <a href="../html/prod.html" class="voltar-btn">← Voltar</a>
+    </header>
+
+    <div class="caixa-container">
+        <h2>Finalizar Compra</h2>
+        <div id="carrinho-itens"></div>
+
+        <h3>Forma de pagamento</h3>
+        <select id="pagamento">
+            <option value="cartao">Cartão de Crédito</option>
+            <option value="boleto">Boleto</option>
+            <option value="pix">Pix</option>
+        </select>
+        
+        
+        <div>
+            <label for="cupom">Cupom de desconto:</label>
+            <input type="text" id="cupom" placeholder="Digite o cupom">
+            <button onclick="aplicarCupom()">Aplicar Cupom</button>
+        </div>
+
+        <h3>Total: <span id="total">R$0,00</span></h3>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </div>
+
+    <script src="../js/checkout.js"></script>
+</body>
+</html>

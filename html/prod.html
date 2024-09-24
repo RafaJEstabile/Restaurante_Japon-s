@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/sushifofo.jpg">
+    <title>Carrossel de Sushis</title>
+    <link rel="stylesheet" href="../css/estiloprod.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="../index.html"><img src="../img/logo.png" alt="Logo Ninja Sushi"></a>
+        </div>
+        <div class="cart-btn">
+        <button onclick="irParaCarrinho()">🛒 Carrinho</button>
+        </div>
+       
+    </header>
+
+    <h2>Sushis Crus</h2>
+    <div class="carousel-container">
+        <button class="prev" onclick="scrollCarouselLeft()">&#8249;</button>
+        <div class="carousel">
+            <div class="item">
+                <img src="../img/niguiri.jpg" alt="Niguiri" width="100px" height="140px">
+                <p>Niguiri</p>
+                <p>R$20,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Niguiri', 20)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Niguiri" value="1" min="1">
+            </div>
+            <div class="item">
+                <img src="../img/niguiricamarao.jpeg" alt="Niguiri Camarão">
+                <p>Niguiri Camarão</p>
+                <p>R$40,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Niguiri Camarão', 40)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Niguiri Camarão" value="1" min="1">
+            </div>
+            <div class="item">
+                <img src="../img/hipsushi.jpg" alt="Hip Sushi">
+                <p>Hip Sushi</p>
+                <p>R$30,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Hip Sushi', 30)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Hip Sushi" value="1" min="1">
+            </div>
+            <div class="item">
+                <img src="../img/joesalmao.png" alt="Joe Salmão">
+                <p>Joe Salmão</p>
+                <p>R$45,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Joe Salmão', 45)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Joe Salmão" value="1" min="1">
+            </div>
+
+            <div class="item">
+                <img src="../img/samuraisushi.jpg" alt="Samurai sushi">
+                <p>Samurai Sushi</p>
+                <p>R$55,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Samurai Sushi', 55)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Samurai Sushi" value="1" min="1">
+            </div>
+
+            <div class="item">
+                <img src="../img/sushisocial.png" alt="Sushi social"  width="100px" height="120px">
+                <p>Sushi Social</p>
+                <p>R$30,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Sushi Social', 30)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Sushi Social" value="1" min="1">
+            </div>
+
+            <div class="item">
+                <img src="../img/sashimi.jpeg" alt="Sashimi" width="100px" height="140px">
+                <p>Sashimi</p>
+                <p>R$60,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Sashimi', 60)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Sashimi" value="1" min="1">
+            </div>
+
+        </div>
+        <button class="next" onclick="scrollCarouselRight()">&#8250;</button>
+    </div>
+
+    <h2>Sushis Hots</h2>
+    <div class="carousel-container" id="carousel-hots">
+        <button class="prev" onclick="scrollCarouselLeftHots()">&#8249;</button>
+        <div class="carousel">
+            <div class="item">
+                <img src="../img/hotatum.jpg" alt="hot Atum">
+                <p>Hot Roll de Atum</p>
+                <p>R$55,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Hot Atum', 55)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Hot Atum" value="1" min="1">
+            </div>
+            <div class="item">
+                <img src="../img/hotsalmao.jpeg" alt="Hot salmao">
+                <p>Hot Roll Salmao</p>
+                <p>R$60,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Hot Salmao', 60)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Hot Salmao" value="1" min="1">
+            </div>
+            <div class="item">
+                <img src="../img/hotfiladelfia.jpg" alt="Hot Filadélfia">
+                <p>Hot Filadélfia</p>
+                <p>R$30,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Hot Filadélfia', 30)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Hot Filadélfia" value="1" min="1">
+            </div>
+            <div class="item">
+                <img src="../img/hotpimenta.png" alt="Hot Pimenta">
+                <p>Hot Roll Pimenta</p>
+                <p>R$40,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Hot Pimenta', 40)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Hot Pimenta" value="1" min="1">
+            </div>
+
+            <div class="item">
+                <img src="../img/hotcebola.png" alt="Hot Cebola">
+                <p>Hot Roll Cebola</p>
+                <p>R$50,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Hot Cebola', 50)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Hot Cebola" value="1" min="1">
+            </div>
+
+            <div class="item">
+                <img src="../img/hotdoritos.jpg" alt="Hot Doritos" >
+                <p>Hot Roll Doritos</p>
+                <p>R$40,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Hot Doritos', 40)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Hot Doritos" value="1" min="1">
+            </div>
+
+            <div class="item">
+                <img src="../img/hotcamarao.jpeg" alt="Hot Camarao" width="100px" height="140px">
+                <p>Hot Roll Camarão</p>
+                <p>R$80,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Hot Camarao', 80)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Hot Camarao" value="1" min="1">
+            </div>
+
+        </div>
+        <button class="next" onclick="scrollCarouselRightHots()">&#8250;</button>
+    </div>
+
+    <h2>Barcas e Temakis</h2>
+    <div class="carousel-container" id="carousel-barca">
+        <button class="prev" onclick="scrollCarouselLeftBarca()">&#8249;</button>
+        <div class="carousel">
+            <div class="item">
+                <img src="../img/barcahot.jpg" alt="Barca Hot">
+                <p>Barca Hot Rolls</p>
+                <p>R$100,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Barca Hot', 100)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Barca Hot" value="1" min="1">
+            </div>
+
+            <div class="item">
+                <img src="../img/barcamista.png" alt="Barca Mista">
+                <p>Barca Mista</p>
+                <p>R$110,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Barca Mista', 110)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Barca Mista" value="1" min="1">
+            </div>
+
+            <div class="item">
+                <img src="../img/barcacrus.jpg" alt="Barca Crus">
+                <p>Barca Crus</p>
+                <p>R$125,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Barca Crus', 125)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Barca Crus" value="1" min="1">
+            </div>
+
+            <div class="item">
+                <img src="../img/temaki.jpeg" alt="Temaki Cru">
+                <p>Temaki Salmao Cru</p>
+                <p>R$35,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Temaki Cru', 35)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Temaki Cru" value="1" min="1">
+            </div>
+
+
+            <div class="item">
+                <img src="../img/temakihot.png" alt="Temaki Hot" width="10px" height="150px">
+                <p>Temaki Salmao Hot</p>
+                <p>R$40,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Temaki Hot', 40)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Temaki Hot" value="1" min="1">
+            </div>
+
+            <div class="item">
+                <img src="../img/hotdogsushi.jpeg" alt="Hot Dog Sushi" width="80px" height="150px">
+                <p>Hot Dog Sushi</p>
+                <p>R$45,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Hot Dog Sushi', 45)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Hot Dog Sushi" value="1" min="1">
+            </div>
+
+        </div>
+        <button class="next" onclick="scrollCarouselRightBarca()">&#8250;</button>
+    </div>
+
+    <h2>Bebidas</h2>
+    <div class="carousel-container" id="carousel-bebidas">
+        <button class="prev" onclick="scrollCarouselLeftBebidas()">&#8249;</button>
+        <div class="carousel">
+            <div class="item">
+                <img src="../img/sojuuva.jpeg" alt="Soju Uva">
+                <p>Soju Uva</p>
+                <p>R$20,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Soju Uva', 20)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Soju Uva" value="1" min="1">
+            </div>
+
+            <div class="item">
+                <img src="../img/sojumorango.png" alt="Soju Morango">
+                <p>Soju Morang</p>
+                <p>R$20,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Soju Morang', 20)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Soju Morang" value="1" min="1">
+            </div>
+
+            <div class="item">
+                <img src="../img/saque.png" alt="Saque">
+                <p>Saque</p>
+                <p>R$35,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Saque', 35)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Saque" value="1" min="1">
+            </div>
+
+            <div class="item">
+                <img src="../img/haineken.png" alt="Haineken">
+                <p>Haineken</p>
+                <p>R$18,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Haineken', 18)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Haineken" value="1" min="1">
+            </div>
+
+
+            <div class="item">
+                <img src="../img/coca.png" alt="Coca-Cola">
+                <p>Coca-Cola</p>
+                <p>R$12,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Coca-Cola', 12)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Coca-Cola" value="1" min="1">
+            </div>
+
+            <div class="item">
+                <img src="../img/sprite.png" alt="Sprite">
+                <p>Sprite</p>
+                <p>R$12,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Sprite', 12)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Sprite" value="1" min="1">
+            </div>
+
+            <div class="item">
+                <img src="../img/refrimelancia.png" alt="Refri Melancia" width="80px" height="150px">
+                <p>Refrigerante Melancia</p>
+                <p>R$20,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Refri Melancia', 20)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Refri Melancia" value="1" min="1">
+            </div>
+
+            <div class="item">
+                <img src="../img/refrileite.png" alt="Refri Leite" width="80px" height="150px">
+                <p>Refrigerante Leite</p>
+                <p>R$20,00</p>
+                <button class="buy-btn" onclick="adicionarAoCarrinho('Refri Leite', 20)">Comprar</button>
+                <input type="number" class="quantidade" data-nome="Refri Leite" value="1" min="1">
+            </div>
+
+        </div>
+        <button class="next" onclick="scrollCarouselRightBebidas()">&#8250;</button>
+    </div>
+
+
+    <script src="../js/carrosel.js"></script>
+    <script src="../js/carrinho.js"></script>
+</body>
+</html>
